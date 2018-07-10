@@ -1,0 +1,25 @@
+{{template "inc_header.html"}}
+{{template "inc_menu.html"}}
+{{$lista := .Ibcs}}
+{{$serie := .Serie}}
+    <div class="container">
+        <h2 class="center alerta">Aviso</h2>
+        <p class="center">As imagens a seguir podem ser pertubadoras e resultam em efeitos adversos. Em razão disso, adaptamo-las aos telespectadores de porte médio - todavia, ainda mantém-se numa área de risco, não sendo garantido de forma alguma a saúde mental dos telespectadores, ou seja: tua conta e risco. Se és uma pessoa sensível, <span class="destaque">fecha o documento imediatamente</span>.</p>
+    </div>
+    <div class="divider"></div>
+    <div class="container">
+        <h2 class="center titulo">LISTA DE IBCS</h2>
+        <h3 class="center subtitulo">SÉRIE: {{$serie}}</h3>
+    </div>
+    <div class="container">
+        <div class="collection">    
+    {{range $index, $ibc := $lista}}
+        <a href="/view/{{$serie}}/{{$ibc}}" class="red-text collection-item">{{$ibc}}</a>
+    {{end}}
+        </div>
+    </div>
+
+
+
+
+{{template "inc_footer.html"}}

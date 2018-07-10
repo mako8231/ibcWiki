@@ -1,0 +1,27 @@
+ <!--modal-->
+ <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Excluir registro</h4>
+      <p>Tem certeza que deseja excluir?</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Sim</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Não</a>
+    </div>
+  </div>
+ <!--modal-->
+ 
+ <!--footer-->
+ <script src="/assets/js/jquery-3.3.1.min.js"></script>
+ <script src="/assets/js/materialize.min.js"></script>
+ <script src="/assets/js/script.js"></script>
+ <script>
+ function excluir(url, nome){
+    if (confirm("Tem certeza que quer excluir "+nome+"?")){
+        window.location.href = url;
+    }   
+}
+ </script>
+ <!--footer-->
+</body>
+</html>

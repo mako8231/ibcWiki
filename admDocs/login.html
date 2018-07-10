@@ -1,0 +1,15 @@
+{{template "header.html"}}
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="/verificar" class="login-frm" method="POST">
+                    <h3>Acesso ao sistema</h3>
+                    <input name="txtUsername" type="text" class="validate" placeholder="Insira o seu nome de usuário" required>
+                    <input name="txtSenha" type="password" class="validate" placeholder="Insira a sua senha" required>
+                    <br>
+                    <br>
+                    <button type="submit" class="waves-effect waves-light btn">Logar</button>
+            </form>
+        </div>
+    </div>
+{{template "footer.html"}}

@@ -1,0 +1,36 @@
+{{template "header.html"}}
+{{template "menu.html"}}
+{{$ibc := .Bixo}}
+{{$serie := .Serie}}
+{{$tamanho := len $ibc.Legendas }}
+    <div id="corpo">
+        <div class="container">
+            <h3>Edição de IBC</h3>
+            <h5>Class de objeto original: <span class="{{index $ibc.Dados 6}}-text" >{{index $ibc.Dados 5}}</span></h5>
+            <form action="/mod/painel/{{$serie}}/{{index $ibc.Dados 0}}/alterar" method="POST">
+                <!-- <input name="txtNome" type="text" value="{{index $ibc.Dados 0}}" required placeholder="insira o nome do IBC (ex: IBC-001)"> -->
+                <input name="txtApelido" type="text" value="{{index $ibc.Dados 1}}" required placeholder="insira o apelido do IBC (ex: chupa-cu)">
+                <select class="browser-default input-field" name="txtClasse" id="" required>
+                   
+                    <option value="" selected>Selecione a classe de objeto</option>
+                    <option value="1">Stefanno</option>
+                    <option value="2">Masao</option>
+                    <option value="3">Arac</option>
+                    <option value="4">Bolu</option>
+                    <option value="5">Soul</option>
+                    <option value="6">Darkente</option>
+                    <option value="7">Luan</option>
+                </select>
+                <textarea name="txtDescricao" id="" cols="30" rows="10" placeholder="descrição">{{index $ibc.Dados 2}}</textarea>
+                <input name="txtImagem" type="text" value="{{index $ibc.Dados 3}}" placeholder="Insira a url da imagem principal: (tente o imgur, caso necessário) " required>
+                <input name="txtLegendaImagem" type="text" value="{{index $ibc.Dados 4}}" placeholder="insira a legenda da imagem" required>
+                <div class="divider"></div>
+                <h5>Galeria</h5>
+                <input name="txtGaleriaImagens" type="text" value="{{range $index, $imagens := $ibc.Dados}}{{if maior $index 6}} {{index $ibc.Dados $index}} {{end}}{{end}}" >
+                <input name="txtGaleriaLegendas" type="text" value="{{range $indice, $legendas := $ibc.Legendas}}{{if menor $indice (min $tamanho 1) }}{{$legendas}} | {{else }}{{$legendas}} {{end}} {{end}}" >
+                <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+                <button class="orange waves-effect waves-light btn" type="reset">Limpar Campos</button>
+            </form>
+        </div>
+    </div>
+{{template "footer.html"}}

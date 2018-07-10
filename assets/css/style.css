@@ -1,0 +1,9 @@
+.alerta{color:red;  text-shadow: 2px 3px 3px black; text-transform: 20pt; }
+.titulo{color: rgb(102, 0, 0); font-size: 23pt;}
+.subtitulo{color: rgb(102, 0, 0); font-size: 20pt;}
+.destaque{color: rgb(102, 0, 0); font-size: 16pt;}
+.link-ibc li a {color: rgb(102, 0, 0);}
+.imagem{margin-top: 10px;}
+.galeria{margin: 0}
+.imagem-galeria{margin: 0; padding: 0px}
+.materialboxed {margin: 0;  padding: 0px}

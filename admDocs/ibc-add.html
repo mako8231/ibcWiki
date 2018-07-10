@@ -1,0 +1,37 @@
+{{template "header.html"}}
+{{template "menu.html"}}
+    <div id="corpo">
+        <div class="container">
+            <h3>Cadastro de IBC</h3>
+            <form action="/mod/painel/salvar_ibc" method="POST">
+                <select class="browser-default input-field" name="txtSerie" id="" required>
+                    <option value="">Selecione a série</option>
+                    <option value="1">Séries 1</option>
+                    <option value="2">Séries 2</option>
+                    <option value="3">Séries 3</option>
+                </select>
+                <input name="txtNome" type="text" required placeholder="insira o nome do IBC (ex: IBC-001)">
+                <input name="txtApelido" type="text" required placeholder="insira o apelido do IBC (ex: chupa-cu)">
+                <select class="browser-default input-field" name="txtClasse" id="" required>
+                    <option value="" selected>Selecione a classe de objeto</option>
+                    <option value="1">Stefanno</option>
+                    <option value="2">Masao</option>
+                    <option value="3">Arac</option>
+                    <option value="4">Bolu</option>
+                    <option value="5">Soul</option>
+                    <option value="6">Darkente</option>
+                    <option value="7">Luan</option>
+                </select>
+                <textarea name="txtDescricao" id="" cols="30" rows="10" placeholder="descrição"></textarea>
+                <input name="txtImagem" type="text" placeholder="Insira a url da imagem principal: (tente o imgur, caso necessário) " required>
+                <input name="txtLegendaImagem" type="text" placeholder="insira a legenda da imagem" required>
+                <div class="divider"></div>
+                <h5>Galeria</h5>
+                <textarea name="txtGaleriaImagens" id="" cols="30" rows="10" placeholder="insira os links da galeria"></textarea>
+                <textarea name="txtGaleriaLegendas" id="" cols="30" rows="10" placeholder="insira as legendas de cada imagem da galeria"></textarea>
+                <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+                <button class="orange waves-effect waves-light btn" type="reset">Limpar Campos</button>
+            </form>
+        </div>
+    </div>
+{{template "footer.html"}}

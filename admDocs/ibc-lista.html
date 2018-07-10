@@ -1,0 +1,28 @@
+{{template "header.html"}}
+{{template "menu.html"}}
+    <div id="corpo">
+        <div class="container">
+            <a href="/mod/ibc/add/" class="waves-effect waves-light btn"><i class="material-icons right">add</i>Adicionar </a>
+            <br>
+            <table class="responsive-table">
+                 
+                <thead>
+                  <tr>
+                      <th>IBC</th>
+                      <th>Ações</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  {{$serie := .Serie}}   
+                  {{range $index, $ibc := .Ibcs}}
+                  <tr>
+                    <td>{{$ibc}}</td>
+                    <td><a href="/mod/painel/ibc/edit/{{$serie}}/{{$ibc}}" class="orange waves-effect waves-light btn"><i class="material-icons">edit</i></a> <a onclick="excluir('/mod/painel/{{$serie}}/{{$ibc}}/deletar', '{{$ibc}}')" class="red waves-effect waves-light btn"><i class="material-icons">delete</i></a></td>
+                  </tr>
+                  {{end}}
+                </tbody>
+              </table>
+        </div>
+    </div>
+{{template "footer.html"}}
