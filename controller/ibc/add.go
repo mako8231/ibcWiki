@@ -59,6 +59,7 @@ func CadastrarIBC(r *http.Request)(err error){
 
 	//Se tudo estiver ok, faça a inserção
 	if msg == ""{
+		nome = strings.Replace(nome, " ", "", -1)
 		ibcObj = model.Ibc{Dados : []string{nome, apelido, descricao, imagem, legendaImagem, nomeClasse, cor}, Legendas: galeriaLegendasA}
 		//Se o campo da galeria foi inserido, insira os campos na array
 		if galeria != ""{
