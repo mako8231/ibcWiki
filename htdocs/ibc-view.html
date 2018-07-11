@@ -33,17 +33,19 @@
 
 <div class="container">
     <div class="galeria">
+        {{if maior (len $ibc.Dados) 6}}
         <h3 class="titulo">Galeria do objeto:</h3>
         <p>Clique nas imagens para mais detalhes:</p>
         <div class="row">
                 {{range $index, $url := $ibc.Dados}}
-                {{if maior $index 6}}
+                {{if maior $index 7}}
                 <div class="col m5 l3">
                 <img class="responsive-img imagem-galeria materialboxed" data-caption="{{index ($ibc.Legendas) (min $index 7)}}" src="{{index $ibc.Dados $index}}" width="300" height="300" alt="">
                 </div>
                 {{end}}
                 {{end}}
         </div>
+        {{end}}
     </div>
 </div>
 
