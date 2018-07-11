@@ -7,4 +7,6 @@
 .galeria{margin: 0}
 .imagem-galeria{margin: 0; padding: 0px}
 .materialboxed {margin: 0;  padding: 0px}
-.texto {text-align: justify;}
+.navbar-material .nav-wrapper .brand-logo img {height: 64px;}
+#logo{height: 64px;}
+.logo-centro{margin: auto;}
