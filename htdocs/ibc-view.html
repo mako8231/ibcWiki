@@ -39,7 +39,7 @@
                 {{range $index, $url := $ibc.Dados}}
                 {{if maior $index 6}}
                 <div class="col m5 l3">
-                <img class="imagem-galeria materialboxed" data-caption="{{index ($ibc.Legendas) (min $index 7)}}" src="{{index $ibc.Dados $index}}" width="300" height="300" alt="">
+                <img class="responsive-img imagem-galeria materialboxed" data-caption="{{index ($ibc.Legendas) (min $index 7)}}" src="{{index $ibc.Dados $index}}" width="300" height="300" alt="">
                 </div>
                 {{end}}
                 {{end}}
