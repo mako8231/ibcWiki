@@ -38,10 +38,6 @@ func CadastrarIBC(r *http.Request)(err error){
 
 	if descricao == ""{msg += "Descrição não informada"}
 
-	if imagem == ""{msg += "Imagem não informada \n"}
-
-	if legendaImagem == ""{msg += "Legenda da imagem não informada \n"}
-
 	if galeria != "" {
 		galeriaArray = strings.Fields(galeria)
 	}
