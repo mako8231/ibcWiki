@@ -11,4 +11,4 @@
 #logo{height: 64px;}
 .logo-centro{margin: auto;}
 .descricao{text-align: justify;}
-.log{background: #F4F4F4; border: rgba(112, 104, 104, 0.644); border-style: dashed;}
+.log{background: #F4F4F4; border: rgba(112, 104, 104, 0.644); border-style: dashed; padding: 10px;}
