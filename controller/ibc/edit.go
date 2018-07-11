@@ -41,8 +41,6 @@ func EditarIBC(r *http.Request) (err error){
 	if apelido==""{msg+="apelido não informado \n"}
 	if classe==""{msg+="classe não informada \n"}
 	if descricao==""{msg+="descrição não informada \n"}
-	if imagem==""{msg+="imagem não informada"}
-	if legendaImagem==""{msg+="legenda da imagem não informada \n"}
 
 	//Separar as legendas em uma array
 	if galeriaLegendas != ""{
