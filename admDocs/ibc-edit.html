@@ -22,8 +22,8 @@
                     <option value="7">Luan</option>
                 </select>
                 <textarea name="txtDescricao" id="" cols="30" rows="10" placeholder="descrição">{{index $ibc.Dados 2}}</textarea>
-                <input name="txtImagem" type="text" value="{{index $ibc.Dados 3}}" placeholder="Insira a url da imagem principal: (tente o imgur, caso necessário) " required>
-                <input name="txtLegendaImagem" type="text" value="{{index $ibc.Dados 4}}" placeholder="insira a legenda da imagem" required>
+                <input name="txtImagem" type="text" value="{{index $ibc.Dados 3}}" placeholder="Insira a url da imagem principal: (tente o imgur, caso necessário) ">
+                <input name="txtLegendaImagem" type="text" value="{{index $ibc.Dados 4}}" placeholder="insira a legenda da imagem">
                 <div class="divider"></div>
                 <h5>Galeria</h5>
                 <input name="txtGaleriaImagens" type="text" value="{{range $index, $imagens := $ibc.Dados}}{{if maior $index 6}} {{index $ibc.Dados $index}} {{end}}{{end}}" >
